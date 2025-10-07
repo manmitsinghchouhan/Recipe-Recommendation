@@ -83,3 +83,34 @@ function mealRecipeModal(meal) {
   mealDetailsContent.innerHTML = html;
   mealDetailsContent.parentElement.classList.add("showRecipe");
 }
+
+// ----- Dark / Light Mode Toggle -----
+const themeToggle = document.getElementById("theme-toggle");
+
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  if (document.body.classList.contains("dark")) {
+    themeToggle.textContent = "☀️";
+  } else {
+    themeToggle.textContent = "🌙";
+  }
+});
+
+// ---------- Back to Top Button ----------
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    backToTop.style.display = "flex";
+  } else {
+    backToTop.style.display = "none";
+  }
+});
+
+backToTop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+

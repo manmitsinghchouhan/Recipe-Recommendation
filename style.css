@@ -9,11 +9,17 @@
     --tenne-tawny: #d65108;
     --tenne-tawny-dark: #b54507;
 }
-body{
-    font-weight: 300;
-    font-size: 1.05rem;
-    line-height: 1.6;
-    font-family: 'Poppins', sans-serif;
+/* adding gradian-background */
+body {
+  font-weight: 300;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*  */
@@ -35,12 +41,16 @@ body{
 .container{
     min-height: 100vh;
 }
-.meal-wrapper{
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
-    background: #fff;
-    text-align: center;
+
+/* add greadian-background */
+.meal-wrapper {
+  max-width: 1280px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 .meal-search{
     margin: 2rem 0;
@@ -94,15 +104,37 @@ body{
 #meal{
     margin: 2.4rem 0;
 }
-.meal-item{
-    border-radius: 1rem;
-    -webkit-border-radius: 1rem;
-    -moz-border-radius: 1rem;
-    -ms-border-radius: 1rem;
-    -o-border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
-    margin: 2rem 0;
+.meal-item {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin: 2rem 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.meal-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.meal-img img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.meal-item:hover .meal-img img {
+  transform: scale(1.05);
+}
+
+.meal-name h3 {
+  font-size: 1.4rem;
+  transition: color 0.3s ease;
+}
+
+.meal-item:hover .meal-name h3 {
+  color: var(--tenne-tawny-dark);
 }
 .meal-img img{
     width: 100%;
@@ -306,4 +338,108 @@ body{
     #meal{
         grid-template-columns: repeat(3, 1fr);
     }
+}
+
+/* ---------- Dark / Light Mode Toggle ---------- */
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: var(--tenne-tawny);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+  z-index: 1000;
+}
+.theme-toggle:hover {
+  background: var(--tenne-tawny-dark);
+  transform: scale(1.1);
+}
+
+/* Dark mode colors */
+body.dark {
+  background: linear-gradient(135deg, #1e1e2f 0%, #2a2a40 100%);
+  color: #f1f1f1;
+}
+body.dark .meal-wrapper {
+  background: #2e2e44;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
+}
+body.dark .search-control {
+  border-color: #fcb69f;
+  color: #fcb69f;
+}
+body.dark .search-control::placeholder {
+  color: #fcb69f;
+}
+body.dark .search-btn,
+body.dark .recipe-btn {
+  background: #fcb69f;
+  color: #2e2e44;
+}
+body.dark .recipe-category {
+  background: #fcb69f;
+  color: #2e2e44;
+}
+
+/* ---------- Animated Button Hover ---------- */
+.search-btn,
+.recipe-btn {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.search-btn::after,
+.recipe-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.search-btn:hover::after,
+.recipe-btn:hover::after {
+  left: 0;
+}
+
+.search-btn:hover,
+.recipe-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------- Back to Top Button ---------- */
+.back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--tenne-tawny);
+  color: #fff;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+.back-to-top:hover {
+  background: var(--tenne-tawny-dark);
+  transform: scale(1.1);
 }
