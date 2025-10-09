@@ -58,36 +58,6 @@ clearBtn.addEventListener("click", () => {
   mealList.classList.remove("notFound"); // Reset state
 });
 
-// --- Favorites Button ---
-const favoritesBtn = document.getElementById("favorites-btn");
-favoritesBtn.addEventListener("click", showFavorites);
-
-function showFavorites() {
-  const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-  let html = "";
-
-  if (favorites.length === 0) {
-    html = "<p>No favorites saved yet!</p>";
-  } else {
-    favorites.forEach((meal) => {
-      html += `
-        <div class="meal-item" data-id="${meal.id}">
-          <div class="meal-img">
-            <img src="${meal.img}" alt="${meal.name}">
-          </div>
-          <div class="meal-name">
-            <h3>${meal.name}</h3>
-            <a href="#" class="recipe-btn">Get Recipe</a>
-          </div>
-        </div>
-      `;
-    });
-  }
-
-  mealList.innerHTML = html;
-  mealList.classList.remove("notFound");
-}
-
 // --- FUNCTIONS ---
 
 // This function runs when you click a BUTTON
