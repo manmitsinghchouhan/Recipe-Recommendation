@@ -65,10 +65,9 @@ body {
     align-items: stretch;
 }
 .search-control,
-.search-btn{
-    width: 20%;
-}
+
 .search-control{
+    flex-grow: 1; 
     padding: 0 1rem;
     font-size: 1.1rem;
     font-family: inherit;
@@ -82,7 +81,7 @@ body {
     color: var(--tenne-tawny);
 }
 .search-btn{
-    
+    padding: 0 20px;
     height: 55px;
     font-size: 1.8rem;
     background: var(--tenne-tawny);
@@ -90,10 +89,7 @@ body {
     border: none;
     border-radius: 2rem;
     transition: all 0.4s linear;
-    -webkit-transition: all 0.4s linear;
-    -moz-transition: all 0.4s linear;
-    -ms-transition: all 0.4s linear;
-    -o-transition: all 0.4s linear;
+    
 }
 .search-btn:hover{
     background: var(--tenne-tawny-dark);
@@ -162,10 +158,6 @@ body {
     -ms-border-radius: 2rem;
     -o-border-radius: 2rem;
     transition: all 0.4s linear;
-    -webkit-transition: all 0.4s linear;
-    -moz-transition: all 0.4s linear;
-    -ms-transition: all 0.4s linear;
-    -o-transition: all 0.4s linear;
 }
 .recipe-btn:hover{
     background: var(--tenne-tawny-dark);
@@ -253,18 +245,7 @@ body {
     -ms-border-radius: 0.3rem;
     -o-border-radius: 0.3rem;
 }
-.recipe-category{
-    background: #fff;
-    font-weight: 600;
-    color: var(--tenne-tawny);
-    display: inline-block;
-    padding: 0.2rem 0.5rem;
-    border-radius: 0.3rem;
-    -webkit-border-radius: 0.3rem;
-    -moz-border-radius: 0.3rem;
-    -ms-border-radius: 0.3rem;
-    -o-border-radius: 0.3rem;
-}
+
 .recipe-instruct{
     padding: 1rem 0;
 }
@@ -287,10 +268,6 @@ body {
     font-size: 1.2rem;
     font-weight: 700;
     transition: all 0.4s linear;
-    -webkit-transition: all 0.4s linear;
-    -moz-transition: all 0.4s linear;
-    -ms-transition: all 0.4s linear;
-    -o-transition: all 0.4s linear;
 }
 .recipe-link a:hover{
     opacity: 0.8;
@@ -392,7 +369,7 @@ body.dark .recipe-category {
 .recipe-btn {
   position: relative;
   overflow: hidden;
-  z-index: 1;
+  z-index: 0;
 }
 
 .search-btn::after,
@@ -443,3 +420,55 @@ body.dark .recipe-category {
   background: var(--tenne-tawny-dark);
   transform: scale(1.1);
 }
+
+/* === Button Layout & Style === */
+.meal-search-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 1.5rem auto;
+  max-width: 700px;
+}
+
+.search-btn {
+  height: 45px;
+  font-size: 1rem;
+  background: var(--tenne-tawny);
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  padding: 0 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 130px;
+}
+
+.search-btn:hover {
+  background: var(--tenne-tawny-dark);
+  transform: scale(1.05);
+}
+
+/* === Special Button Colors === */
+#clear-btn {
+  background: #6c757d;
+}
+
+#clear-btn:hover {
+  background: #555;
+}
+
+.search-control {
+  padding: 0 1rem;
+  font-size: 1.1rem;
+  border: 2px solid var(--tenne-tawny);
+  border-radius: 2rem;
+  outline: none;
+  color: var(--tenne-tawny);
+  flex: 1;
+  min-width: 250px;
+  max-width: 400px;
+  height: 45px;
+}
+
