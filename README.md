@@ -1,57 +1,87 @@
+# 🥗 Recipe Recommendation – ROSPL Mini Project
 
-# Recipe-Recommendation🥗🥗
+> A web application that allows users to search for meals using ingredients or cuisines.
+> It uses TheMealDB API to fetch real-time recipe data with instructions and video links.
 
-The Recipe-Recommendation project is a web application that allows users to search for recipes based on ingredients and countries. It provides users with details of recipes, including videos, instructions, and the list of ingredients used. This README will guide you through the setup, features, and usage of the project.
+This project was enhanced as part of the ROSPL Mini Project (Semester VI).
 
+---
 
-## Features
+## ✨ Features
 
-- Recipe Search by Ingredients: Users can search for recipes by entering a list of ingredients. The application will provide a list of recipes that can be prepared with those ingredients.
+-   🔍 **Search Recipes by Ingredient** (e.g., “chicken”, “egg”)
+-   🌍 **Search Recipes by Country/Area** (e.g., “Indian”, “Mexican”)
+-   📜 **Detailed Recipe View** – instructions, category, and video link
+-   🌈 **Gradient Background** – modern and minimal
+-   🌙 **Dark/Light Mode Toggle** – switches theme dynamically
+-   ✨ **Animated Buttons** – smooth hover transitions for better UX
+-   🆙 **Back to Top Button** – for easy navigation
+-   🧹 **Clear Search Feature** – quickly reset input and results
+-   ⌨️ **Smart Enter Key Search** – detects whether user entered ingredient or cuisine
+-   ⚡ **Modern Async/Await Logic** – cleaner and faster API fetching
+-   🧱 **Error Handling Added** – shows friendly message on network errors
 
-- Recipe Search by Countries: Users can explore recipes from specific countries. They can select a country from a list and view recipes associated with that country's cuisine.
+---
 
-- Recipe Details: For each recipe, the application provides detailed information:
+## 🧠 Technologies Used
 
-- Video: Users can watch a video of the recipe being prepared.
-- Ingredients: The list of ingredients required for the recipe.
-- Instructions: Step-by-step cooking instructions to prepare the dish.
+| Area            | Technology                                |
+| --------------- | ----------------------------------------- |
+| **Frontend** | HTML5, CSS3, JavaScript (ES6)             |
+| **API** | TheMealDB API                             |
+| **Version Control** | Git, GitHub                             |
+| **Design** | Responsive Web Design, Accessibility      |
 
+---
 
-## Run Locally
+## 👨‍💻 Group Members
 
-Clone the project
+| Name                  | Role            | Contribution                                                                                              |
+| --------------------- | --------------- | --------------------------------------------------------------------------------------------------------- |
+| **Manmit Singh Chouhan** | Lead Developer  | Major updates: Added dark mode toggle, Clear Search feature, smart Enter key search, refactored JS with async/await, improved layout & accessibility. |
+| **Girase Hitesh** | UI & Animation  | Created button hover effects and helped refine gradient theme.                                            |
+| **Mali Aniket** | Design & Layout | Enhanced recipe cards with hover/zoom animation.                                                          |
+| **Doiphode Sakshi** | Navigation & Testing | Added Back-to-Top feature and tested responsive behavior.                                                 |
 
-```bash
-  git clone https://github.com/Sudeep-Poojary/Recipe-Recommendation.git
-```
+---
 
+## 🧾 Setup & Run Instructions
 
-## Tech Stack
+### 1. Clone the Repository
 
-Html, CSS, Javascript
+git clone [https://github.com/manmitsinghchouhan/Recipe-Recommendation.git](https://github.com/manmitsinghchouhan/Recipe-Recommendation.git)
+cd Recipe-Recommendation 
 
+### 2. Open the Project
+Just open `index.html` in your browser.
+> **Note:** No backend is required – it uses TheMealDB’s public API.
 
-## API Reference
+---
 
-#### Get recipe by ingredients
+## 🚀 Try It Out
 
-```http
-  GET https://www.themealdb.com/api/json/v1/1/filter.php?i=Onion
-```
+1.  Enter an ingredient (e.g., “chicken”) or an area (e.g., “Indian”).
+2.  Press `Enter` or click the corresponding button.
+3.  View the search results and click on any recipe for detailed instructions.
 
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `api_key` | `string` | **Required**. Your API key |
+---
 
-#### Get recipe by Country
+## ⚖️ License
 
-```http
-  GET https://www.themealdb.com/api/json/v1/1/filter.php?a=Indian
-```
+This project is licensed under the MIT License.
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `string` | **Required**. Id of item to fetch |
+**Copyright © 2023 Sudeep Poojary**
 
+*Modified in 2025 by Manmit Singh Chouhan & Team for educational use under ROSPL.*
 
+---
 
+### 🪄 Screenshots
+
+| Light Mode | Dark Mode |
+| :---: | :---: |
+| ![Light Mode Screenshot](./Images/light-mode.png) | ![Dark Mode Screenshot](./Images/dark-mode.png) |
+
+| Card Hover Effect | Back to Top Button |
+| :---: | :---: |
+| ![Card Hover Animation](./Images/card-hover.png) | ![Back to Top Feature](./Images/backtotop.png) |
