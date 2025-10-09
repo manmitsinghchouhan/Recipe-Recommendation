@@ -38,10 +38,10 @@ This project was enhanced as part of the ROSPL Mini Project (Semester VI).
 
 | Name                  | Role            | Contribution                                                                                              |
 | --------------------- | --------------- | --------------------------------------------------------------------------------------------------------- |
-| **Manmit Singh Chouhan** | Lead Developer | Major updates: Added dark mode toggle, Clear Search feature, smart Enter key search, refactored JS with async/await, improved layout & accessibility. |
-| **Girase Hitesh** | UI & Animation | Created button hover effects and helped refine gradient theme. |
-| **Aniket Mali** | Design & Layout & Testing| Enhanced recipe cards with hover/zoom animation and tested responsive behavior. |
-| **Doiphode Sakshi**| Navigation  | Added Back-to-Top feature. |
+| **Manmit Singh Chouhan** | Lead Developer | Major updates: Implemented Dark/Light Mode, Clear Search feature, and intelligent Enter-key search. Refactored JavaScript using async/await for modern structure and better error handling. Improved accessibility and layout. |
+| **Girase Hitesh** | UI & Animation | Designed modern gradient theme and button hover animations. Enhanced overall color palette consistency and user interface appeal.|
+| **Aniket Mali** | Enhanced recipe cards with hover/zoom effects and optimized responsive behavior using Flexbox. |
+| **Doiphode Sakshi**| Navigation  | Implemented Back-to-Top feature and tested navigation responsiveness across devices. |
 
 ---
 
